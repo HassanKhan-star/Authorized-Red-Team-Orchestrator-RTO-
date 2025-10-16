@@ -1,3 +1,28 @@
+# Basic syntax
+    PYTHONPATH=src python3 -m authorized_rto.main [COMMAND] [OPTIONS]
+
+    # Examples:
+
+    # 1. Show help
+    PYTHONPATH=src python3 -m authorized_rto.main --help
+
+    # 2. Show version
+    PYTHONPATH=src python3 -m authorized_rto.main --version
+
+    # 3. Full assessment (recon + vuln scan + reports)
+    PYTHONPATH=src python3 -m authorized_rto.main assess --targets 192.168.1.1 --scope-id PROJ-001
+
+    # 4. Reconnaissance only
+    PYTHONPATH=src python3 -m authorized_rto.main recon --targets 192.168.1.1 --ports 80 443 --scope-id RECON-001
+
+    # 5. Vulnerability scan
+    PYTHONPATH=src python3 -m authorized_rto.main vuln --targets 192.168.1.1 --scope-id VULN-001
+
+    # 6. Generate reports
+    PYTHONPATH=src python3 -m authorized_rto.main report --targets 192.168.1.1 --scope-id REPORT-001
+
+
+
 # Authorized-Red-Team-Orchestrator-RTO-
 Authorized RTO — auditable orchestration for authorized red‑team assessments, recon, vuln scanning, and report generation.
 
